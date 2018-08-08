@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class compStats {
 
-	public static ArrayList<Integer> ranks;  //TeamNums
+	public static ArrayList<Integer> ranks = new ArrayList<Integer>();  //TeamNums
 	
 
 }

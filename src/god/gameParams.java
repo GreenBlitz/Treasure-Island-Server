@@ -5,29 +5,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class gameParams {
-	
-	public static final int RED1 = 0, RED2 = 0, BLUE1 = 0, BLUE2 = 0;
-	
-	public static int REDCARGOPOINTS=0,
-					  BLUECARGOPOINTS=0,
-	
-					  REDSTACKPOINTS=0,
-					  BLUESTACKPOINTS=0,
-	
-					  REDANCHORPOINTS=0,
-					  BLUEANCHORPOINTS=0,
-	
-					  REDCANNONPOINTS=0,
-					  BLUECANNONPOINTS=0,
 
-					  REDPENELTY=0,
-					  BLUEPENELTY=0,
-	
-					  REDRP=0,
-					  BLUERP=0;
-	public static HashMap<String,Integer> blueCargo=new HashMap<>();
-	public static HashMap<String,Integer> redCargo=new HashMap<>();
-	
+	public static final int RED1 = 0, RED2 = 0, BLUE1 = 0, BLUE2 = 0;
+
+	public static int REDCARGOPOINTS = 0, BLUECARGOPOINTS = 0,
+
+			REDSTACKPOINTS = 0, BLUESTACKPOINTS = 0,
+
+			REDANCHORPOINTS = 0, BLUEANCHORPOINTS = 0,
+
+			REDCANNONPOINTS = 0, BLUECANNONPOINTS = 0,
+
+			REDPENELTY = 0, BLUEPENELTY = 0,
+
+			REDRP = 0, BLUERP = 0;
+	public static HashMap<String, Integer> blueCargo = new HashMap<>();
+	public static HashMap<String, Integer> redCargo = new HashMap<>();
+
 	static {
 		blueCargo.put("Treasure", 0);
 		blueCargo.put("Crate", 0);
@@ -39,14 +33,14 @@ public class gameParams {
 		redCargo.put("Barrel", 0);
 		redCargo.put("Box", 0);
 
-
-		
 	}
-	
+
 	public static int getRank(int teamnum) {
-		return compStats.ranks.indexOf(teamnum)+1;
+		System.out.println("length:" + compStats.ranks.size());
+		for (int i : compStats.ranks) {
+			System.out.println(compStats.ranks.get(i));
+		}
+		return (compStats.ranks.indexOf(teamnum) + 1);
 	}
 
-
-	
 }

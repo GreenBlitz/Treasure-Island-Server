@@ -1,62 +1,62 @@
 package graphical_user_interface;
-import java.net.ServerSocket;
-import java.util.HashMap;
-
 import god.gameParams;
 import javafx.scene.image.ImageView;
 
 public class DurGame {
 	//bluee cargo amounts
-	public static ImageView blueAlliCargoFirstDig = ImageFactory.createIV(810, 330, 12, 20, Main.getNum(gameParams.blueCargo.values().stream().mapToInt(x->x).sum(), 0)); // alliCargo - allianceCargo
-	public static ImageView blueAlliCargoSecDig = ImageFactory.createIV(825, 330, 12, 20, Main.getNum(gameParams.blueCargo.values().stream().mapToInt(x->x).sum(), 1));
+	public static ImageView blueAlliCargoFirstDig = ImageFactory.createIV(810, 330, 12, 20, Maini.getNum(gameParams.blueCargo.values().stream().mapToInt(x->x).sum(), 0)); // alliCargo - allianceCargo
+	public static ImageView blueAlliCargoSecDig = ImageFactory.createIV(825, 330, 12, 20, Maini.getNum(gameParams.blueCargo.values().stream().mapToInt(x->x).sum(), 1));
 	
-	public static ImageView blueTreasure = ImageFactory.createIV(985, 425, 12, 20, Main.getNum(gameParams.blueCargo.get("Treasure"), 0));
+	public static ImageView blueTreasure = ImageFactory.createIV(985, 425, 12, 20, Maini.getNum(gameParams.blueCargo.get("Treasure"), 0));
 	
-	public static ImageView blueCrate = ImageFactory.createIV(810, 425, 12, 20, Main.getNum(gameParams.blueCargo.get("Crate"), 1));
+	public static ImageView blueCrate = ImageFactory.createIV(810, 425, 12, 20, Maini.getNum(gameParams.blueCargo.get("Crate"), 1));
 	
-	public static ImageView blueBarrelFirstDig = ImageFactory.createIV(985, 330, 12, 20, Main.getNum(gameParams.blueCargo.get("Barrel"), 0));
-	public static ImageView blueBarrelSecDig = ImageFactory.createIV(1000, 330, 12, 20, Main.getNum(gameParams.blueCargo.get("Barrel"), 1));
+	public static ImageView blueBarrelFirstDig = ImageFactory.createIV(985, 330, 12, 20, Maini.getNum(gameParams.blueCargo.get("Barrel"), 0));
+	public static ImageView blueBarrelSecDig = ImageFactory.createIV(1000, 330, 12, 20, Maini.getNum(gameParams.blueCargo.get("Barrel"), 1));
 	
-	public static ImageView blueBoxFirstDig = ImageFactory.createIV(1155, 330, 12, 20, Main.getNum(gameParams.blueCargo.get("BOX"), 0));
-	public static ImageView blueBoxSecDig = ImageFactory.createIV(1170, 330, 12, 20, Main.getNum(gameParams.blueCargo.get("BOX"), 1));
+	public static ImageView blueBoxFirstDig = ImageFactory.createIV(1155, 330, 12, 20, Maini.getNum(gameParams.blueCargo.get("Box"), 0));
+	public static ImageView blueBoxSecDig = ImageFactory.createIV(1170, 330, 12, 20, Maini.getNum(gameParams.blueCargo.get("Box"), 1));
 	
-	public static ImageView blueScoreFirstDig = ImageFactory.createIV(770, 110, 38, 63, Main.getNum(gameParams.BLUECARGOPOINTS+gameParams.BLUESTACKPOINTS+gameParams.BLUEANCHORPOINTS+gameParams.BLUECANNONPOINTS+gameParams.BLUEPENELTY, 0));	
-	public static ImageView blueScoreSecDig = ImageFactory.createIV(730, 110, 38, 63, Main.getNum(gameParams.BLUECARGOPOINTS+gameParams.BLUESTACKPOINTS+gameParams.BLUEANCHORPOINTS+gameParams.BLUECANNONPOINTS+gameParams.BLUEPENELTY, 1));	
-	public static ImageView blueScoreThiDig = ImageFactory.createIV(690, 110, 38, 63, Main.getNum(gameParams.BLUECARGOPOINTS+gameParams.BLUESTACKPOINTS+gameParams.BLUEANCHORPOINTS+gameParams.BLUECANNONPOINTS+gameParams.BLUEPENELTY, 2));	
+	public static ImageView blueScoreFirstDig = ImageFactory.createIV(970, 110, 38, 63, Maini.getNum(gameParams.BLUECARGOPOINTS+gameParams.BLUESTACKPOINTS+gameParams.BLUEANCHORPOINTS+gameParams.BLUECANNONPOINTS+gameParams.BLUEPENELTY, 0));	
+	public static ImageView blueScoreSecDig = ImageFactory.createIV(930, 110, 38, 63, Maini.getNum(gameParams.BLUECARGOPOINTS+gameParams.BLUESTACKPOINTS+gameParams.BLUEANCHORPOINTS+gameParams.BLUECANNONPOINTS+gameParams.BLUEPENELTY, 0));	
+	public static ImageView blueScoreThiDig = ImageFactory.createIV(890, 110, 38, 63, Maini.getNum(gameParams.BLUECARGOPOINTS+gameParams.BLUESTACKPOINTS+gameParams.BLUEANCHORPOINTS+gameParams.BLUECANNONPOINTS+gameParams.BLUEPENELTY, 0));	
+	public static ImageView blueScoreFourDig = ImageFactory.createIV(850, 110, 38, 63, Maini.getNum(gameParams.BLUECARGOPOINTS+gameParams.BLUESTACKPOINTS+gameParams.BLUEANCHORPOINTS+gameParams.BLUECANNONPOINTS+gameParams.BLUEPENELTY, 0));	
 	//end of blue cargo amounts
 	
 	//red cargo amounts
-	public static ImageView redAlliCargoFirstDig = ImageFactory.createIV(210, 330, 12, 20, Main.getNum(gameParams.redCargo.values().stream().mapToInt(x->x).sum(),0)); // alliCargo - allianceCargo
-	public static ImageView redAlliCargoSecDig = ImageFactory.createIV(225, 330, 12, 20, Main.getNum(gameParams.redCargo.values().stream().mapToInt(x->x).sum(), 1));
+	public static ImageView redAlliCargoFirstDig = ImageFactory.createIV(210, 330, 12, 20, Maini.getNum(gameParams.redCargo.values().stream().mapToInt(x->x).sum(),0)); // alliCargo - allianceCargo
+	public static ImageView redAlliCargoSecDig = ImageFactory.createIV(225, 330, 12, 20, Maini.getNum(gameParams.redCargo.values().stream().mapToInt(x->x).sum(), 1));
 	
-	public static ImageView redTreasure = ImageFactory.createIV(385, 425, 12, 20, Main.getNum(gameParams.redCargo.get("Treasure"), 0));
+	public static ImageView redTreasure = ImageFactory.createIV(385, 425, 12, 20, Maini.getNum(gameParams.redCargo.get("Treasure"), 0));
 	
-	public static ImageView redCrate = ImageFactory.createIV(210, 425, 12, 20, Main.getNum(gameParams.redCargo.get("Crate"), 1));
+	public static ImageView redCrate = ImageFactory.createIV(210, 425, 12, 20, Maini.getNum(gameParams.redCargo.get("Crate"), 1));
 	
-	public static ImageView redBarrelFirstDig = ImageFactory.createIV(385, 330, 12, 20, Main.getNum(gameParams.redCargo.get("Barrel"), 0));
-	public static ImageView redBarrelSecDig = ImageFactory.createIV(400, 330, 12, 20, Main.getNum(gameParams.redCargo.get("Barrel"), 1));
+	public static ImageView redBarrelFirstDig = ImageFactory.createIV(385, 330, 12, 20, Maini.getNum(gameParams.redCargo.get("Barrel"), 0));
+	public static ImageView redBarrelSecDig = ImageFactory.createIV(400, 330, 12, 20, Maini.getNum(gameParams.redCargo.get("Barrel"), 1));
 	
-	public static ImageView redBoxFirstDig = ImageFactory.createIV(560, 330, 12, 20, Main.getNum(gameParams.redCargo.get("BOX"), 0));
-	public static ImageView redBoxSecDig = ImageFactory.createIV(575, 330, 12, 20, Main.getNum(gameParams.redCargo.get("BOX"), 1));
+	public static ImageView redBoxFirstDig = ImageFactory.createIV(560, 330, 12, 20, Maini.getNum(gameParams.redCargo.get("Box"), 0));
+	public static ImageView redBoxSecDig = ImageFactory.createIV(575, 330, 12, 20, Maini.getNum(gameParams.redCargo.get("Box"), 1));
 	
-	public static ImageView redScoreFirstDig = ImageFactory.createIV(630, 110, 38, 63, Main.getNum(gameParams.REDANCHORPOINTS+gameParams.REDCANNONPOINTS+gameParams.REDCARGOPOINTS+gameParams.REDSTACKPOINTS+gameParams.REDPENELTY, 0));	
-	public static ImageView redScoreSecDig = ImageFactory.createIV(590, 110, 38, 63, Main.getNum(gameParams.REDANCHORPOINTS+gameParams.REDCANNONPOINTS+gameParams.REDCARGOPOINTS+gameParams.REDSTACKPOINTS+gameParams.REDPENELTY, 1));	
-	public static ImageView redScoreThiDig = ImageFactory.createIV(550, 110, 38, 63, Main.getNum(gameParams.REDANCHORPOINTS+gameParams.REDCANNONPOINTS+gameParams.REDCARGOPOINTS+gameParams.REDSTACKPOINTS+gameParams.REDPENELTY, 2));	
+	public static ImageView redScoreFirstDig = ImageFactory.createIV(430, 110, 38, 63, Maini.getNum(gameParams.REDANCHORPOINTS+gameParams.REDCANNONPOINTS+gameParams.REDCARGOPOINTS+gameParams.REDSTACKPOINTS+gameParams.REDPENELTY, 3));	
+	public static ImageView redScoreSecDig = ImageFactory.createIV(390, 110, 38, 63, Maini.getNum(gameParams.REDANCHORPOINTS+gameParams.REDCANNONPOINTS+gameParams.REDCARGOPOINTS+gameParams.REDSTACKPOINTS+gameParams.REDPENELTY, 2));	
+	public static ImageView redScoreThiDig = ImageFactory.createIV(350, 110, 38, 63, Maini.getNum(gameParams.REDANCHORPOINTS+gameParams.REDCANNONPOINTS+gameParams.REDCARGOPOINTS+gameParams.REDSTACKPOINTS+gameParams.REDPENELTY, 1));
+	public static ImageView redScoreFourDig = ImageFactory.createIV(310, 110, 38, 63, Maini.getNum(gameParams.REDANCHORPOINTS+gameParams.REDCANNONPOINTS+gameParams.REDCARGOPOINTS+gameParams.REDSTACKPOINTS+gameParams.REDPENELTY, 0));	
+
 	//end of red cargo amounts
 		
-	//time remained till and of game
+	//time reMainied till and of game
 	//TODO : 0?????
-	public static ImageView timeones = ImageFactory.createIV(695, 201, 11, 18, Main.getNum(0, 0));
-	public static ImageView timeTens = ImageFactory.createIV(681, 201, 11, 18, Main.getNum(0, 1));
-	public static ImageView timeMins = ImageFactory.createIV(656, 201, 11, 18, Main.getNum(0, 2));
+	public static ImageView timeones = ImageFactory.createIV(695, 201, 11, 18, Maini.getNum(0, 2));
+	public static ImageView timeTens = ImageFactory.createIV(681, 201, 11, 18, Maini.getNum(0, 1));
+	public static ImageView timeMins = ImageFactory.createIV(656, 201, 11, 18, Maini.getNum(0, 0));
 	public static ImageView timeColon = ImageFactory.createIV(670, 203, 8, 14, IMGs.colon);
-	//end of time remained till end of game
+	//end of time reMainied till end of game
 	
 	//teams
-	public static ImageView blueTeam1 = ImageFactory.createIV(275, 175, 11, 18, Main.getNum(gameParams.BLUE1, 0));
-	public static ImageView blueTeam2 = ImageFactory.createIV(525, 175, 11, 18, Main.getNum(gameParams.BLUE2, 0));
-	public static ImageView redTeam1 = ImageFactory.createIV(855, 175, 11, 18, Main.getNum(gameParams.RED1, 0));
-	public static ImageView redTeam2 = ImageFactory.createIV(1105, 175, 11, 18, Main.getNum(gameParams.RED2, 0));
+	public static ImageView blueTeam1 = ImageFactory.createIV(275, 175, 11, 18, Maini.getNum(gameParams.BLUE1, 0));
+	public static ImageView blueTeam2 = ImageFactory.createIV(525, 175, 11, 18, Maini.getNum(gameParams.BLUE2, 0));
+	public static ImageView redTeam1 = ImageFactory.createIV(855, 175, 11, 18, Maini.getNum(gameParams.RED1, 0));
+	public static ImageView redTeam2 = ImageFactory.createIV(1105, 175, 11, 18, Maini.getNum(gameParams.RED2, 0));
 	//end of teams
 	
 	//bluee completion tasks
