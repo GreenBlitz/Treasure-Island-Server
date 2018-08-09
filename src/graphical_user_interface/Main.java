@@ -1,5 +1,6 @@
 package graphical_user_interface;
 
+import god.gameParams;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -173,4 +174,154 @@ public class Main extends Application {
 		}
 		return digit;
 	} 
+	
+	public static void update() {
+		//TODO: (BOM) get: time remained till end of game(in seconds raw), state of cannons, anchors and bridges
+		//blue cargo amounts
+		int blueCargoScore = 0;	//score from blue cargo
+		int blueAnchorScore = 0;	//score from blue anchors raised
+		int blueCannonScore = 0;	//score from blue cannons shot
+		int blueBridgeScore = 0;	//score from blue bridge raised
+		int blueTotal = blueCargoScore + blueAnchorScore + blueCannonScore + blueBridgeScore; //total blue score
+		int blueTreasures = 0;	//amount treasures in blue cargo-hold
+		int blueAlliCargos = 0;	//amount alliance-cargos in blue cargo-hold
+		int blueCrates = 0;	//amount crates in blue cargo-hold
+		int blueBoxes = 0;	//amount boxes in blue cargo-hold
+		int blueBarrels = 0;	//amount barrels in blue cargo-hold
+		int blueCannonsShot = 0;	//amount blue cannons shot
+		int blueAnchorsRaised = 0;	//amount blue anchors raised
+		boolean blueBridgeRaised = false; //blue bridge raised or not
+
+		int redCargoScore = 0;	//score from red cargo
+		int redAnchorScore = 0;	//score from red anchors raised
+		int redCannonScore = 0;	//score from red cannons shot
+		int redBridgeScore = 0;	//score from red bridge raised
+		int redTotal = redCargoScore + redAnchorScore + redCannonScore + redBridgeScore; //total red score
+		int redTreasures = 0;	//amount treasures in red cargo-hold
+		int redAlliCargos = 0;	//amount alliance-cargos in red cargo-hold
+		int redCrates = 0;	//amount crates in red cargo-hold
+		int redBoxes = 0;	//amount boxes in red cargo-hold
+		int redBarrels = 0;	//amount barrels in red cargo-hold
+		int redCannonsShot = 0;	//amount red cannons shot
+		int redAnchorsRaised = 0;	//amount red anchors raised
+		boolean redBridgeRaised = false; //red bridge raised or not
+
+		int timeTillEnd = 0;
+		 DurGame.blueAlliCargoFirstDig.setImage(Main.getNum(blueAlliCargos, 0)); // alliCargo - allianceCargo
+		 DurGame.blueAlliCargoSecDig.setImage(Main.getNum(blueAlliCargos, 1));
+		
+		 DurGame.blueTreasure.setImage(Main.getNum(blueTreasures, 0));
+		
+		 DurGame.blueCrate.setImage(Main.getNum(blueCrates, 0));
+		
+		 DurGame.blueBarrelFirstDig.setImage(Main.getNum(blueBarrels, 0));
+		 DurGame.blueBarrelSecDig.setImage(Main.getNum(blueBarrels, 1));
+		
+		 DurGame.blueBoxFirstDig.setImage(Main.getNum(blueBoxes, 0));
+		 DurGame.blueBoxSecDig.setImage(Main.getNum(blueBoxes, 1));
+		
+		 DurGame.blueScoreFirstDig.setImage(Main.getNum(blueTotal, 0));	
+		 DurGame.blueScoreSecDig.setImage(Main.getNum(blueTotal, 1));	
+		 DurGame.blueScoreThiDig.setImage(Main.getNum(blueTotal, 2));	
+		 DurGame.blueScoreFourDig.setImage(Main.getNum(blueTotal, 3));	
+		//end of blue cargo amounts
+		
+		//red cargo amounts
+		 DurGame.redAlliCargoFirstDig.setImage(Main.getNum(redAlliCargos, 0)); // alliCargo - allianceCargo
+		 DurGame.redAlliCargoSecDig.setImage(Main.getNum(redAlliCargos, 1));
+		
+		 DurGame.redTreasure.setImage(Main.getNum(redTreasures, 0));
+		
+		 DurGame.redCrate.setImage(Main.getNum(redCrates, 1));
+		
+		 DurGame.redBarrelFirstDig.setImage(Main.getNum(redBarrels, 0));
+		 DurGame.redBarrelSecDig.setImage(Main.getNum(redBarrels, 1));
+		
+		 DurGame.redBoxFirstDig.setImage(Main.getNum(redBoxes, 0));
+		 DurGame.redBoxSecDig.setImage(Main.getNum(redBoxes, 1));
+		
+		 DurGame.redScoreFirstDig.setImage(Main.getNum(redTotal, 3));	
+		 DurGame.redScoreSecDig.setImage(Main.getNum(redTotal, 2));	
+		 DurGame.redScoreThiDig.setImage(Main.getNum(redTotal, 1));
+		 DurGame.redScoreFourDig.setImage(Main.getNum(redTotal, 0));	
+
+		//end of red cargo amounts
+			
+		//time reMainied till and of game
+		 DurGame.timeones.setImage(Main.getNum(timeTillEnd, 2));
+		 DurGame.timeTens.setImage(Main.getNum(timeTillEnd, 1));
+		 DurGame.timeMins.setImage(Main.getNum(timeTillEnd, 0));
+		 DurGame.timeColon.setImage(IMGs.colon);
+		//end of time reMainied till end of game
+				
+		//blue completion tasks
+		 if(blueBridgeRaised == true) {
+			 DurGame.blueBridge.setImage(IMGs.comBridge); 
+		 } else {
+			 DurGame.blueBridge.setImage(IMGs.incomBridge);
+		 }
+		 switch(blueAnchorsRaised) {
+		 case 1:
+			 DurGame.blueAnchor1.setImage(IMGs.comAnchor);
+			 DurGame.blueAnchor2.setImage(IMGs.incomAnchor);
+			 break;
+		 case 2:
+			 DurGame.blueAnchor1.setImage(IMGs.comAnchor);
+			 DurGame.blueAnchor2.setImage(IMGs.comAnchor);
+			 break;
+		 default:
+			 DurGame.blueAnchor1.setImage(IMGs.incomAnchor);
+			 DurGame.blueAnchor2.setImage(IMGs.incomAnchor);		 
+		 }
+		 
+		 switch(blueCannonsShot) {
+		 case 1:
+			 DurGame.blueCannon1.setImage(IMGs.comCannon);
+			 DurGame.blueCannon2.setImage(IMGs.incomCannon);
+			 break;
+		 case 2:
+			 DurGame.blueCannon1.setImage(IMGs.comCannon);
+			 DurGame.blueCannon2.setImage(IMGs.comCannon);
+			 break;
+		 default:
+			 DurGame.blueCannon1.setImage(IMGs.incomCannon);
+			 DurGame.blueCannon2.setImage(IMGs.incomCannon);		 
+		 }
+		//end of blue completion tasks
+		
+		//red completion tasks
+		 if(redBridgeRaised == true) {
+			 DurGame.redBridge.setImage(IMGs.comBridge); 
+		 } else {
+			 DurGame.redBridge.setImage(IMGs.incomBridge);
+		 }
+		 switch(redAnchorsRaised) {
+		 case 1:
+			 DurGame.redAnchor1.setImage(IMGs.comAnchor);
+			 DurGame.redAnchor2.setImage(IMGs.incomAnchor);
+			 break;
+		 case 2:
+			 DurGame.redAnchor1.setImage(IMGs.comAnchor);
+			 DurGame.redAnchor2.setImage(IMGs.comAnchor);
+			 break;
+		 default:
+			 DurGame.redAnchor1.setImage(IMGs.incomAnchor);
+			 DurGame.redAnchor2.setImage(IMGs.incomAnchor);		 
+		 }
+		 
+		 switch(redCannonsShot) {
+		 case 1:
+			 DurGame.redCannon1.setImage(IMGs.comCannon);
+			 DurGame.redCannon2.setImage(IMGs.incomCannon);
+			 break;
+		 case 2:
+			 DurGame.redCannon1.setImage(IMGs.comCannon);
+			 DurGame.redCannon2.setImage(IMGs.comCannon);
+			 break;
+		 default:
+			 DurGame.redCannon1.setImage(IMGs.incomCannon);
+			 DurGame.redCannon2.setImage(IMGs.incomCannon);		 
+		 }
+		//End of red completion tasks
+	}
 }
