@@ -18,37 +18,37 @@ public class EventHandler {
 		case BRIDGE_RAISED:
 			DurGame.redBridge.setImage(IMGs.comBridge);
 		case CRATE_LOADED:
-			Maini.redCrateAmount += 1;
+			Main.redCrateAmount += 1;
 			break;
 		case BOX_LOADED:
-			Maini.redBoxAmount += 1;
+			Main.redBoxAmount += 1;
 			break;
 		case BARREL_LOADED:
-			Maini.redBarrelAmount += 1;
+			Main.redBarrelAmount += 1;
 			break;
 		case TREASURE_LOADED:
-			Maini.redTreasureAmount += 1;
+			Main.redTreasureAmount += 1;
 			break;
 		case ALLICARGO_LOADED:
-			Maini.redAlliCargoAmount += 1;
+			Main.redAlliCargoAmount += 1;
 			break;
 		case CRATE_UNLOADED:
-			Maini.redCrateAmount -= 1;
+			Main.redCrateAmount -= 1;
 			break;
 
 		case BOX_UNLOADED:
-			Maini.redBoxAmount -= 1;
+			Main.redBoxAmount -= 1;
 			break;
 
 		case TREASURE_UNLOADED:
-			Maini.redTreasureAmount -= 1;
+			Main.redTreasureAmount -= 1;
 			break;
 
 		case BARREL_UNLOADED:
-			Maini.redBarrelAmount -= 1;
+			Main.redBarrelAmount -= 1;
 			break;
 		case ALLICARGO_UNLOADED:
-			Maini.redAlliCargoAmount -= 1;
+			Main.redAlliCargoAmount -= 1;
 			break;
 		default:
 			while (true) {
@@ -76,34 +76,34 @@ public class EventHandler {
 		case BRIDGE_RAISED:
 			DurGame.blueBridge.setImage(IMGs.comBridge);
 		case CRATE_LOADED:
-			Maini.blueCrateAmount += 1;
+			Main.blueCrateAmount += 1;
 			break;
 		case BOX_LOADED:
-			Maini.blueBoxAmount += 1;
+			Main.blueBoxAmount += 1;
 			break;
 		case BARREL_LOADED:
-			Maini.blueBarrelAmount += 1;
+			Main.blueBarrelAmount += 1;
 			break;
 		case TREASURE_LOADED:
-			Maini.blueTreasureAmount += 1;
+			Main.blueTreasureAmount += 1;
 			break;
 		case ALLICARGO_LOADED:
-			Maini.blueAlliCargoAmount += 1;
+			Main.blueAlliCargoAmount += 1;
 			break;
 		case CRATE_UNLOADED:
-			Maini.blueCrateAmount -= 1;
+			Main.blueCrateAmount -= 1;
 			break;
 		case BOX_UNLOADED:
-			Maini.blueBoxAmount -= 1;
+			Main.blueBoxAmount -= 1;
 			break;
 		case TREASURE_UNLOADED:
-			Maini.blueTreasureAmount -= 1;
+			Main.blueTreasureAmount -= 1;
 			break;
 		case BARREL_UNLOADED:
-			Maini.blueBarrelAmount -= 1;
+			Main.blueBarrelAmount -= 1;
 			break;
 		case ALLICARGO_UNLOADED:
-			Maini.blueAlliCargoAmount -= 1;
+			Main.blueAlliCargoAmount -= 1;
 			break;
 		default:
 			while (true) {

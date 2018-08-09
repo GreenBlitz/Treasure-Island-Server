@@ -1,8 +1,6 @@
 package god;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 
 public class gameParams {
 
@@ -36,10 +34,6 @@ public class gameParams {
 	}
 
 	public static int getRank(int teamnum) {
-		System.out.println("length:" + compStats.ranks.size());
-		for (int i : compStats.ranks) {
-			System.out.println(compStats.ranks.get(i));
-		}
 		return (compStats.ranks.indexOf(teamnum) + 1);
 	}
 
